@@ -88,6 +88,7 @@ def pregunta_03():
     return lambda x: (stemmer.stem(w) for w in analyzer(x))
 
 
+
 def pregunta_04():
     """
     Especificación del pipeline y entrenamiento
@@ -137,7 +138,7 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "alpha": np.arange(0.1, 1.01, 0.1),
+        "bernoulliModel__alpha": np.arange(0.1, 1.01, 0.1),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
@@ -156,7 +157,6 @@ def pregunta_04():
 
     # Retorne el mejor modelo
     return gridSearchCV
-
 
 def pregunta_05():
     """
