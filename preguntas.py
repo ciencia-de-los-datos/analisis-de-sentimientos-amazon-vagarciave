@@ -122,7 +122,7 @@ def pregunta_04():
         stop_words="english",
         token_pattern="[^0-9a-zA-Z]",
         binary=True,
-        max_df=1,
+        max_df=1.0,
         min_df=5,
     )
 
